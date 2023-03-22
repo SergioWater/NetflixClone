@@ -1,4 +1,4 @@
-const key = '88485d42c5a2c0d6be8776ea324d0ca4'
+const key = process.env.REACT_APP_MOVIE_KEY
 
 const request = {
 
