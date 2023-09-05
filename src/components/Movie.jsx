@@ -20,7 +20,6 @@ const Movie = ({ item }) => {
           id: item.id,
           title: item.title,
           img: item.backdrop_path,
-          test: "test",
         }),
       });
     } else {
