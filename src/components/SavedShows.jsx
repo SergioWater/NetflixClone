@@ -17,14 +17,13 @@ const SavedShows = () => {
     slider.scrollLeft = slider.scrollLeft + 500;
   };
         
-        //   useEffect(() => {
-        //     onSnapshot(
-        //       doc(db, "users", `${user?.email}`, (doc) => {
-        //         setMovies(doc.data()?.savedShows);
-        //       })
-        //     );
-        //   }, [user?.email]);
-        
+  useEffect(() => {
+    const userDocRef = doc(db, "users", `${user?.email}`);
+    
+    onSnapshot(userDocRef, (doc) => {
+      setMovies(doc.data()?.savedShows);
+    });
+  }, [user?.email]);
           return (
             <>
               <h2 className="text-white font-bold md:text-xl p-4">My Shows</h2>
